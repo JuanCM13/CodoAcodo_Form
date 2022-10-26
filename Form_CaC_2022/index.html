@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="./App_Style/style.css">
+    <script src="./App_Func/script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <form id="loginForm" action="" method="POST">
+            <h1>Sing Up</h1>
+            <div class="campo input-userName">
+                <label for="userName">Username</label>
+            <input onkeyup="validateUserName(event);" 
+                onclick="freePlaceHolder(event);"
+                onblur="leaveInput(event);"
+                autocomplete="off" type="text" name="userName" placeholder="Enter your username.." maxlength="15" tabindex="-1">
+                <small id="smallUser"></small> 
+            </div>            
+
+            <div class="campo input-email">
+                <label for="email">Email</label>
+                <input onkeyup="validateEmail(event);" 
+                onclick="freePlaceHolder(event);"
+                onblur="leaveInput(event);"
+                autocomplete="off" name="email" placeholder="Enter your email.." maxlength="40" tabindex="-1">
+                <small></small>
+            </div>
+
+            <div class="campo input-password">
+                <label for="password">Password</label>
+                <input onkeyup="validatePassword(event);" 
+                onclick="freePlaceHolder(event);"
+                onblur="leaveInput(event);"
+                autocomplete="off" type="password" name="password" placeholder="Enter your password.." maxlength="10" tabindex="-1">
+                <small></small>
+            </div>
+
+            <div class="campo input-rePassword">
+                <label for="rePassword">Confirm Password</label>
+                <input onkeyup="validateRePassword(event);" 
+                onclick="freePlaceHolder(event);"
+                onblur="leaveInput(event);"
+                autocomplete="off" type="password" name="rePassword" placeholder="Enter your password again.." maxlength="10" tabindex="-1">
+                <small></small>
+            </div>
+            
+            <input type="button" class="btn btn-1" value="Submit" onclick="submitEventHandler();">
+            <a href="https://google.com"><input type="button" class="btn btn-2" value="Cancel"></a>
+        </form>
+    </div>
+</body>
+</html>
